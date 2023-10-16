@@ -41,12 +41,12 @@ public class UserController {
     }
 
     @GetMapping("/register")
-    private String register() {
+    public String register() {
         return "register";
     }
 
     @PostMapping("/register")
-    private String register(@Valid UserRegisterDto userRegisterDto,
+    public String register(@Valid UserRegisterDto userRegisterDto,
                             BindingResult bindingResult,
                             RedirectAttributes redirectAttributes) {
 
