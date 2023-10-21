@@ -1,0 +1,29 @@
+logging:
+    level:
+        blog: WARN
+        org:
+            hibernate:
+                SQL: DEBUG
+                type:
+                    descriptor: TRACE
+            nodeValue: WARN
+server:
+    port: 8080
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        password: 12345
+        url: jdbc:mysql://localhost:3306/dictionaryApp?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        open-in-view: false
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+                format_sql: true
+    mvc:
+        hiddenmethod:
+            filter:
+                enabled: true
